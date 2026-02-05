@@ -2,9 +2,11 @@
 
 A cohesive, warm theme for terminal applications based on a teal-to-coral palette.
 
-![Palette](https://colorhunt.co/palette/3f9aae79c9c5ffe2aff96e5b)
+[Color Hunt Palette](https://colorhunt.co/palette/3f9aae79c9c5ffe2aff96e5b)
 
 ## Palette
+
+![Palette](https://i.ibb.co/Ps3VqwhN/Color-Hunt-Palette-3f9aae79c9c5ffe2aff96e5b.png)
 
 | Color | Hex | Usage |
 |-------|-----|-------|
