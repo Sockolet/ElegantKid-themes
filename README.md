@@ -55,7 +55,8 @@ color_theme = "ElegantKid"
 ```
 
 ### Neovim
-Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+**Standalone theme** (for your own config):
 ```lua
 {
   "Sockolet/ElegantKid-themes",
@@ -67,7 +68,13 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
   end
 }
 ```
-See [nvim/README.md](nvim/README.md) for more installation options and configuration.
+See [nvim/README.md](nvim/README.md) for more installation options.
+
+**Complete LazyVim setup** (pre-configured):
+```bash
+cp -r nvim-lazyvim ~/.config/nvim
+```
+See [nvim-lazyvim/README.md](nvim-lazyvim/README.md) for details.
 
 ## Preview
 
