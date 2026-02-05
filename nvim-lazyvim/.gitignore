@@ -1,0 +1,18 @@
+# Neovim
+plugin/packer_compiled.lua
+lazy-lock.json
+
+# Compiled Lua
+test.lua
+
+# macOS
+.DS_Store
+
+# Session
+session/
+
+# Undo
+undo/
+
+# Logs
+log/
