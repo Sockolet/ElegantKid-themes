@@ -16,39 +16,41 @@ return {
 
       local capabilities = cmp_nvim_lsp.default_capabilities()
 
+      -- Simple server setup without handlers
+      local servers = {
+        "bashls",
+        "html",
+        "cssls",
+        "jsonls",
+        "pyright",
+        "tsserver",
+      }
+
       mason_lspconfig.setup({
-        ensure_installed = {
-          "lua_ls",
-          "bashls",
-          "html",
-          "cssls",
-          "jsonls",
-          "pyright",
-          "tsserver",
-        },
-        handlers = {
-          function(server_name)
-            lspconfig[server_name].setup({
-              capabilities = capabilities,
-            })
-          end,
-          ["lua_ls"] = function()
-            lspconfig.lua_ls.setup({
-              capabilities = capabilities,
-              settings = {
-                Lua = {
-                  diagnostics = {
-                    globals = { "vim" },
-                  },
-                  workspace = {
-                    library = vim.api.nvim_get_runtime_file("", true),
-                    checkThirdParty = false,
-                  },
-                  telemetry = { enable = false },
-                },
-              },
-            })
-          end,
+        ensure_installed = servers,
+      })
+
+      -- Setup each server
+      for _, server in ipairs(servers) do
+        lspconfig[server].setup({
+          capabilities = capabilities,
+        })
+      end
+
+      -- Special setup for lua_ls
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              library = vim.api.nvim_get_runtime_file("", true),
+              checkThirdParty = false,
+            },
+            telemetry = { enable = false },
+          },
         },
       })
 
