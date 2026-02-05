@@ -52,6 +52,21 @@ Then set in `~/.config/btop/btop.conf`:
 color_theme = "ElegantKid"
 ```
 
+### Neovim
+Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+```lua
+{
+  "Sockolet/ElegantKid-themes",
+  name = "elegantkid",
+  priority = 1000,
+  config = function()
+    require("elegantkid").setup()
+    vim.cmd("colorscheme elegantkid")
+  end
+}
+```
+See [nvim/README.md](nvim/README.md) for more installation options and configuration.
+
 ## Preview
 
 The theme provides a consistent look across all tools:
@@ -59,6 +74,7 @@ The theme provides a consistent look across all tools:
 - **Oh-My-Posh**: Teal → Turquoise → Cream → Coral powerline segments
 - **colorls**: Color-coded file types and git status
 - **btop**: Gradient meters from cool (turquoise) to hot (coral)
+- **Neovim**: Full syntax highlighting with Tree-sitter and LSP support
 
 ## License
 
