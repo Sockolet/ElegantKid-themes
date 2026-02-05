@@ -1,0 +1,52 @@
+# ElegantKid Theme for colorls
+# Based on palette: #3F9AAE #79C9C5 #FFE2AF #F96E5B
+# A warm teal and coral theme matching oh-my-posh and ghostty themes
+
+# Main Colors
+unrecognized_file: '#F96E5B'   # coral - unknown files
+recognized_file:   '#FFE2AF'   # cream - standard files
+executable_file:   '#79C9C5'   # turquoise - executables
+dir:               '#3F9AAE'   # teal - directories
+
+# Link
+dead_link: '#F96E5B'           # coral - broken symlinks
+link:      '#79C9C5'           # turquoise - working symlinks
+
+# Special files
+socket:     '#79C9C5'          # turquoise
+blockdev:   '#79C9C5'          # turquoise
+chardev:    '#79C9C5'          # turquoise
+hidden:     '#b47a9c'          # muted magenta (teal+coral mix)
+hidden_dir: '#5fb4c7'          # lighter teal
+
+# Access Modes
+write:     '#FFE2AF'           # cream - writable
+read:      '#79C9C5'           # turquoise - readable
+exec:      '#F96E5B'           # coral - executable bit
+no_access: '#9e5a50'           # darker coral - no permission
+
+# Age (file modification time)
+day_old:     '#79C9C5'         # turquoise - recent (< 24h)
+hour_old:    '#9ae0dc'         # bright turquoise - very recent (< 1h)
+no_modifier: '#3F9AAE'         # teal - older files
+
+# File Size
+file_large:  '#F96E5B'         # coral - large files
+file_medium: '#FFE2AF'         # cream - medium files
+file_small:  '#fff0d4'         # lighter cream - small files
+
+# Random
+report: '#FFE2AF'              # cream
+user:   '#FFE2AF'              # cream
+tree:   '#3F9AAE'              # teal
+empty:  '#FFE2AF'              # cream
+error:  '#F96E5B'              # coral
+normal: '#FFE2AF'              # cream
+inode:  '#FFE2AF'              # cream
+
+# Git
+deletion:     '#F96E5B'        # coral - deleted files
+modification: '#FFE2AF'        # cream - modified files
+untracked:    '#ff8a7a'        # light coral - untracked files
+addition:     '#79C9C5'        # turquoise - new files
+unchanged:    '#3F9AAE'        # teal - clean repo

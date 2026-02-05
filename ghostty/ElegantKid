@@ -1,0 +1,70 @@
+# ElegantKid Theme for Ghostty
+# Based on palette: #3F9AAE #79C9C5 #FFE2AF #F96E5B
+# A dark theme with warm teal and coral accents
+
+# Background - deep dark blue-gray that complements the teal
+background = #1a1f2e
+
+# Foreground - soft cream for easy readability
+foreground = #FFE2AF
+
+# Cursor colors (coral)
+cursor-color = #F96E5B
+cursor-text = #1a1f2e
+
+# Selection colors
+selection-background = #3F9AAE
+selection-foreground = #1a1f2e
+
+# The 16 standard terminal colors (0-15)
+# Black (dark variants)
+palette = 0=#1a1f2e
+palette = 8=#2a3a4e
+
+# Red (coral)
+palette = 1=#F96E5B
+palette = 9=#ff8a7a
+
+# Green (turquoise variant)
+palette = 2=#79C9C5
+palette = 10=#9ae0dc
+
+# Yellow (cream)
+palette = 3=#FFE2AF
+palette = 11=#fff0d4
+
+# Blue (teal)
+palette = 4=#3F9AAE
+palette = 12=#5fb4c7
+
+# Magenta (mix of teal and coral)
+palette = 5=#b47a9c
+palette = 13=#d49abc
+
+# Cyan (light turquoise)
+palette = 6=#79C9C5
+palette = 14=#9ae0dc
+
+# White (light cream)
+palette = 7=#f5e6d3
+palette = 15=#fffaf0
+
+# Extended palette colors (16-255) - additional useful colors
+# Dark teal variations
+palette = 16=#264653
+palette = 17=#2a9d8f
+
+# Warm accents
+palette = 196=#F96E5B
+palette = 214=#FFE2AF
+palette = 215=#ffcc99
+
+# Teal variations
+palette = 31=#3F9AAE
+palette = 36=#79C9C5
+palette = 37=#5bc0be
+palette = 38=#4ecdc4
+palette = 39=#3aaed9
+
+# URL style (optional styling)
+# url-color = #79C9C5

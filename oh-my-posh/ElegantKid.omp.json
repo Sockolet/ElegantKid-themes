@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "plain",
+          "template": "<#3F9AAE>\ue0b6</><#1a1a1a,#3F9AAE> {{.Icon}} </><#3F9AAE,#79C9C5>\ue0b0</>",
+          "properties": {
+            "arch": "\uf303",
+            "ubuntu": "\ue73a",
+            "debian": "\ue77d",
+            "fedora": "\ue76e",
+            "manjaro": "\uf312",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "windows": "\ue62a"
+          }
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "template": "<#1a1a1a,#79C9C5> {{ .UserName }} </><#79C9C5,#FFE2AF>\ue0b0</>",
+          "properties": {
+            "display_host": false
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "template": "<#1a1a1a,#FFE2AF> \uf07c {{ .Path }} </><#FFE2AF,#FFE2AF>\ue0b0</>",
+          "properties": {
+            "style": "folder",
+            "folder_separator_icon": " \ue0b1 ",
+            "max_depth": 3
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "template": "{{ if .Working.Changed }}<#F96E5B,#FFE2AF>\ue0c6</><#1a1a1a,#F96E5B> {{ .HEAD }} \uf044 {{ .Working.String }} </><#F96E5B>#FFE2AF>\ue0c6</>{{ else if .Staging.Changed }}<#F96E5B,#FFE2AF>\ue0c6</><#1a1a1a,#F96E5B> {{ .HEAD }} \uf046 {{ .Staging.String }} </><#F96E5B,#FFE2AF>\ue0c6</>{{ else }}<#F96E5B,#FFE2AF>\ue0c6</><#1a1a1a,#F96E5B> {{ .HEAD }} </><#F96E5B,#FFE2AF>\ue0c6</>{{ end }}",
+          "properties": {
+            "fetch_status": true,
+            "branch_icon": "\ue725 "
+          }
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "template": "{{ if gt .Code 0 }}<#1a1a1a,#F96E5B> \uf00d </><#F96E5B>\ue0b0</>{{ else }}<#1a1a1a,#FFE2AF> \uf00c </><#FFE2AF>\ue0b0</>{{ end }}",
+          "properties": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ]
+}
