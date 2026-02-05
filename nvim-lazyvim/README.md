@@ -1,129 +1,69 @@
-# ElegantKid for LazyVim
+# ElegantKid Neovim Configuration
 
-A complete LazyVim configuration with the ElegantKid theme.
+A clean Neovim setup with lazy.nvim plugin manager and the ElegantKid theme.
 
 ## Features
 
-- **ElegantKid Theme**: Full syntax highlighting with Tree-sitter and LSP support
-- **Pre-configured Plugins**:
-  - Treesitter for syntax highlighting
-  - LSP with mason for language servers
-  - nvim-cmp for completion
-  - Telescope for fuzzy finding
-  - Neo-tree for file explorer
-  - Bufferline for tabs
-  - Lualine for status line
-  - Gitsigns for git integration
-  - Which-key for keymap hints
-  - Conform for formatting
+- **ElegantKid Theme** - Warm teal-to-coral color scheme
+- **Treesitter** - Syntax highlighting
+- **LSP** - Language server protocol with Mason
+- **Completion** - nvim-cmp with LSP, buffer, and path sources
+- **Telescope** - Fuzzy finder
+- **File Explorer** - Neo-tree
+- **Status Line** - Lualine
+- **Buffer Line** - Bufferline
+- **Git** - Gitsigns
+- **Notifications** - nvim-notify
+- **Which-key** - Keymap hints
 
 ## Installation
 
 ### Fresh Install
 
-1. **Backup your existing Neovim config**:
-   ```bash
-   mv ~/.config/nvim ~/.config/nvim.bak
-   mv ~/.local/share/nvim ~/.local/share/nvim.bak
-   mv ~/.local/state/nvim ~/.local/state/nvim.bak
-   mv ~/.cache/nvim ~/.cache/nvim.bak
-   ```
+```bash
+# Backup existing config
+mv ~/.config/nvim ~/.config/nvim.bak
 
-2. **Clone this config**:
-   ```bash
-   git clone https://github.com/Sockolet/ElegantKid-themes.git /tmp/elegantkid
-   cp -r /tmp/elegantkid/nvim-lazyvim ~/.config/nvim
-   ```
+# Clone this config
+git clone https://github.com/Sockolet/ElegantKid-themes.git /tmp/elegantkid
+cp -r /tmp/elegantkid/nvim-lazyvim ~/.config/nvim
 
-3. **Start Neovim**:
-   ```bash
-   nvim
-   ```
-   Lazy.nvim will automatically install all plugins on first start.
-
-### Add to Existing Config
-
-If you already have a LazyVim setup and just want the theme:
-
-1. Copy the ElegantKid theme files:
-   ```bash
-   mkdir -p ~/.config/nvim/lua/elegantkid
-   cp /tmp/elegantkid/nvim-lazyvim/lua/elegantkid/*.lua ~/.config/nvim/lua/elegantkid/
-   ```
-
-2. Add the colorscheme plugin to your `lua/plugins/colorscheme.lua`:
-   ```lua
-   return {
-     {
-       dir = vim.fn.stdpath("config") .. "/lua/elegantkid",
-       name = "elegantkid",
-       priority = 1000,
-       config = function()
-         require("elegantkid").setup()
-         vim.cmd("colorscheme elegantkid")
-       end,
-     },
-     {
-       "LazyVim/LazyVim",
-       opts = {
-         colorscheme = "elegantkid",
-       },
-     },
-   }
-   ```
+# Start nvim (plugins will auto-install)
+nvim
+```
 
 ## Key Bindings
 
-### General
+Leader key: `Space`
 
-- `<Space>` - Leader key
+### General
 - `<leader>ff` - Find files
 - `<leader>fg` - Live grep
 - `<leader>fb` - Buffers
-- `<leader>fe` - File explorer (Neo-tree)
-- `<leader>e` - Toggle Neo-tree
+- `<leader>e` - Toggle file explorer
 
 ### LSP
-
 - `gd` - Go to definition
 - `gr` - Go to references
 - `K` - Hover documentation
 - `<leader>ca` - Code action
-- `<leader>rn` - Rename
 
-### Git
+### Navigation
+- `<C-h/j/k/l>` - Window navigation
+- `<Esc>` - Clear search highlights
 
-- `]h` - Next hunk
-- `[h` - Previous hunk
-- `<leader>ghs` - Stage hunk
-- `<leader>ghr` - Reset hunk
+## Configuration
 
-### Buffers
+Edit files in `~/.config/nvim/lua/`:
+- `config/options.lua` - Vim options
+- `config/keymaps.lua` - Key mappings
+- `plugins/` - Plugin configurations
 
-- `<S-h>` - Previous buffer
-- `<S-l>` - Next buffer
-- `<leader>bd` - Delete buffer
-- `<leader>bp` - Toggle pin
+## Palette
 
-## Customization
-
-Edit `lua/elegantkid/init.lua` to customize the theme:
-
-```lua
-require("elegantkid").setup({
-  transparent = true,  -- Enable transparent background
-  terminal_colors = true,  -- Set terminal colors
-})
-```
-
-## Dependencies
-
-- Neovim >= 0.9.0
-- Git
-- A Nerd Font (for icons)
-- Optional: `ripgrep` (for Telescope grep)
-- Optional: `fd` (for Telescope find_files)
-
-## License
-
-MIT - See parent repository for details.
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Teal | `#3F9AAE` | Keywords, types |
+| Turquoise | `#79C9C5` | Functions, strings |
+| Cream | `#FFE2AF` | Text, highlights |
+| Coral | `#F96E5B` | Errors, warnings |
