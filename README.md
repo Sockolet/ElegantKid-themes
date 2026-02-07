@@ -76,6 +76,23 @@ cp -r nvim-lazyvim ~/.config/nvim
 ```
 See [nvim-lazyvim/README.md](nvim-lazyvim/README.md) for details.
 
+### OpenCode
+
+Copy `opencode/ElegantKid.json` to your OpenCode themes directory:
+```bash
+mkdir -p ~/.config/opencode/themes
+cp opencode/ElegantKid.json ~/.config/opencode/themes/
+```
+
+Then set in your OpenCode config:
+```json
+{
+  "theme": "ElegantKid"
+}
+```
+
+See [opencode/README.md](opencode/README.md) for details.
+
 ## Preview
 
 The theme provides a consistent look across all tools:
@@ -84,6 +101,7 @@ The theme provides a consistent look across all tools:
 - **colorls**: Color-coded file types and git status
 - **btop**: Gradient meters from cool (turquoise) to hot (coral)
 - **Neovim**: Full syntax highlighting with Tree-sitter and LSP support
+- **OpenCode**: AI coding assistant with warm teal-to-coral UI
 
 ## License
 
