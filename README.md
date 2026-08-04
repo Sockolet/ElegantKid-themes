@@ -38,6 +38,23 @@ Then source it in your `.bashrc` or `.zshrc`:
 eval "$(oh-my-posh init bash --config ~/.poshthemes/ElegantKid.omp.json)"
 ```
 
+### Windows Terminal
+Open Windows Terminal settings with **Ctrl+,**, select **Open JSON file**, and merge the
+`schemes` and `profiles.defaults` entries from `windows-terminal/ElegantKid.json` into
+your existing `settings.json`. Set `colorScheme` to `ElegantKid` for any profile you
+want to style.
+
+The `themes` entry is optional and adds matching tab and window styling on versions of
+Windows Terminal that support custom application themes.
+
+### PowerShell
+Dot-source `powershell/ElegantKid.PowerShell.ps1` from your PowerShell profile:
+```powershell
+. "$HOME\path\to\ElegantKid-themes\powershell\ElegantKid.PowerShell.ps1"
+```
+PowerShell 7 or later uses the full RGB palette. Windows PowerShell 5.1 falls back to
+the closest available console colors.
+
 ### colorls
 Copy `colorls/dark_colors.yaml` to your colorls config:
 ```bash

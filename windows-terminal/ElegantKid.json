@@ -1,0 +1,56 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "theme": "ElegantKid",
+  "profiles": {
+    "defaults": {
+      "colorScheme": "ElegantKid"
+    }
+  },
+  "schemes": [
+    {
+      "background": "#1A1F2E",
+      "black": "#1A1F2E",
+      "blue": "#3F9AAE",
+      "brightBlack": "#4B556E",
+      "brightBlue": "#67B8C8",
+      "brightCyan": "#C1F2ED",
+      "brightGreen": "#A0E0DB",
+      "brightPurple": "#C6A7B5",
+      "brightRed": "#FF8C7D",
+      "brightWhite": "#FFF8EA",
+      "brightYellow": "#FFF0CE",
+      "cursorColor": "#F96E5B",
+      "cyan": "#79C9C5",
+      "foreground": "#FFE2AF",
+      "green": "#79C9C5",
+      "name": "ElegantKid",
+      "purple": "#A8899B",
+      "red": "#F96E5B",
+      "selectionBackground": "#315466",
+      "white": "#FFE2AF",
+      "yellow": "#FFE2AF"
+    }
+  ],
+  "themes": [
+    {
+      "name": "ElegantKid",
+      "tab": {
+        "background": "#243445FF",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#1A1F2EFF"
+      },
+      "tabRow": {
+        "background": "#1A1F2EFF",
+        "unfocusedBackground": "#141924FF"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": "#3F9AAEFF",
+        "unfocusedFrame": "#243445FF",
+        "useMica": false
+      }
+    }
+  ]
+}
